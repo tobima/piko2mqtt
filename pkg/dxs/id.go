@@ -1,0 +1,59 @@
+package dxs
+
+//go:generate go run golang.org/x/tools/cmd/stringer -type=DxsID
+
+const (
+	Serial             DxsID = 16777728
+	ArticleNo          DxsID = 16777472
+	TypeName           DxsID = 16780544
+	FwVersion          DxsID = 16779265
+	HwVersion          DxsID = 16779266
+	UiVersion          DxsID = 16779267
+	ParVersion         DxsID = 16779268
+	Mac                DxsID = 117440811
+	InvName            DxsID = 16777984
+	Ai1                DxsID = 167772417
+	Ai2                DxsID = 167772673
+	Ai3                DxsID = 167772929
+	Ai4                DxsID = 167773185
+	State              DxsID = 16780032
+	CountrySetting     DxsID = 16779521
+	CountrySettingText DxsID = 16779522
+	OpHours            DxsID = 251658496
+	TotalYield         DxsID = 251658753
+	DailyYield         DxsID = 251658754
+	DC1_I              DxsID = 33555201
+	DC1_U              DxsID = 33555202
+	DC1_P              DxsID = 33555203
+	DC2_I              DxsID = 33555457
+	DC2_U              DxsID = 33555458
+	DC2_P              DxsID = 33555459
+	DC3_I              DxsID = 33555713
+	DC3_U              DxsID = 33555714
+	DC3_P              DxsID = 33555715
+	DC_P               DxsID = 33556736
+	AC_P               DxsID = 67109120
+	AC_F               DxsID = 67110400
+	Cos_phi            DxsID = 67110656
+	Limit              DxsID = 67110144
+	L1_U               DxsID = 67109378
+	L1_I               DxsID = 67109377
+	L1_P               DxsID = 67109379
+	L2_U               DxsID = 67109634
+	L2_I               DxsID = 67109633
+	L2_P               DxsID = 67109635
+	L3_U               DxsID = 67109890
+	L3_I               DxsID = 67109889
+	L3_P               DxsID = 67109891
+	LogEntries         DxsID = 234881792
+	LogEntry0          DxsID = 234881537
+	LogEntry1          DxsID = 234881538
+	LogEntry2          DxsID = 234881539
+	LogEntry3          DxsID = 234881540
+	LogEntry4          DxsID = 234881541
+	LogEntry5          DxsID = 234881542
+	LogEntry6          DxsID = 234881543
+	LogEntry7          DxsID = 234881544
+	LogEntry8          DxsID = 234881545
+	LogEntry9          DxsID = 234881546
+)
