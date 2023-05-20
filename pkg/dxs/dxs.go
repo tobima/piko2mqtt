@@ -2,7 +2,6 @@ package dxs
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"net/http"
 	"net/url"
@@ -40,8 +39,8 @@ func Gather(host string, entries []DxsID) Response {
 	}
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
-	fmt.Printf("Url: %s \n", base)
-	fmt.Printf("Resp: %s \n", body)
+	//fmt.Printf("Url: %s \n", base)
+	//fmt.Printf("Resp: %s \n", body)
 	return ParseRespone(body)
 }
 
