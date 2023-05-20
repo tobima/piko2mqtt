@@ -2,6 +2,7 @@ package dxs
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 	"net/url"
@@ -23,6 +24,12 @@ type Response struct {
 	DxsEntries []Entry
 }
 
+func PrintEntries(entries []Entry) {
+	for _, entry := range entries {
+		fmt.Printf("%s: %s \n", entry.ID, entry.Value)
+	}
+}
+
 func Gather(host string, entries []DxsID) Response {
 	base, err := url.Parse("http://" + host + "/api/dxs.json")
 	if err != nil {
@@ -39,8 +46,6 @@ func Gather(host string, entries []DxsID) Response {
 	}
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
-	//fmt.Printf("Url: %s \n", base)
-	//fmt.Printf("Resp: %s \n", body)
 	return ParseRespone(body)
 }
 
