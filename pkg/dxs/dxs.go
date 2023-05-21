@@ -20,13 +20,36 @@ type Entry struct {
 	Value interface{}
 }
 
+func (e Entry) String() string {
+	var value string
+	valF, ok := e.Value.(float64)
+	if ok {
+		switch e.ID {
+		case OpHours:
+			value = fmt.Sprintf("%.0f h", valF)
+		case TotalYield:
+			value = fmt.Sprintf("%.3f KWh", valF)
+		case DailyYield:
+			value = fmt.Sprintf("%.3f Wh", valF)
+		case AC_P:
+			value = fmt.Sprintf("%.2f W", valF)
+		default:
+			value = fmt.Sprintf("%f", valF)
+		}
+	} else {
+		value = fmt.Sprintf("%s", e.Value)
+	}
+
+	return fmt.Sprintf("%s: %s", e.ID, value)
+}
+
 type Response struct {
 	DxsEntries []Entry
 }
 
 func PrintEntries(entries []Entry) {
 	for _, entry := range entries {
-		fmt.Printf("%s: %s \n", entry.ID, entry.Value)
+		fmt.Printf("%s\n", entry)
 	}
 }
 
