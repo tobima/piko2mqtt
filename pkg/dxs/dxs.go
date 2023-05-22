@@ -32,6 +32,20 @@ func (e Entry) String() string {
 		case DailyYield:
 			value = fmt.Sprintf("%.3f Wh", valF)
 		case AC_P:
+			fallthrough
+		case DC_P:
+			fallthrough
+		case DC1_P:
+			fallthrough
+		case DC2_P:
+			fallthrough
+		case DC3_P:
+			fallthrough
+		case L1_P:
+			fallthrough
+		case L2_P:
+			fallthrough
+		case L3_P:
 			value = fmt.Sprintf("%.2f W", valF)
 		default:
 			value = fmt.Sprintf("%f", valF)
