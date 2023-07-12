@@ -3,8 +3,8 @@ module github.com/tobima/piko2mqtt
 go 1.18
 
 require (
-	golang.org/x/exp v0.0.0-20230519143937-03e91628a987
-	golang.org/x/tools v0.9.1
+	golang.org/x/exp v0.0.0-20230711153332-06a737ee72cb
+	golang.org/x/tools v0.11.0
 )
 
 require (
@@ -14,6 +14,6 @@ require (
 
 require (
 	github.com/spf13/cobra v1.7.0
-	golang.org/x/mod v0.10.0 // indirect
-	golang.org/x/sys v0.8.0 // indirect
+	golang.org/x/mod v0.12.0 // indirect
+	golang.org/x/sys v0.10.0 // indirect
 )
